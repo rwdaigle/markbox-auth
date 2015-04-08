@@ -9,6 +9,7 @@ gem 'puma'
 
 gem 'dropbox-sdk', '~> 1.6.4', require: 'dropbox_sdk'
 gem 'attr_encrypted'
+gem 'scrolls'
 
 group :production do
   gem 'rails_12factor'

@@ -21,6 +21,10 @@ ActiveRecord::Schema.define(version: 20150408175803) do
     t.string "encrypted_db_access_token"
     t.string "encrypted_db_access_token_salt"
     t.string "encrypted_db_access_token_iv"
+    t.string "db_display_name"
+    t.string "db_email"
   end
+
+  add_index "users", ["db_user_id"], name: "index_users_on_db_user_id", unique: true, using: :btree
 
 end
