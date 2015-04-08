@@ -1,0 +1,5 @@
+<% if(logged_in?) %>
+  Hi Dropbox user <%= current_user.db_user_id %>
+<% else %>
+  <%= link_to "Login to Dropbox", login_path %>
+<% end %>
