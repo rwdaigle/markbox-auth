@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
   validates_presence_of :db_user_id, :db_access_token
 
-  before_save :set_db_account_info, on: :create
+  before_save :set_db_account_info, on: :create, unless: lambda { |u| u.db_display_name && u.db_email }
 
   class << self
 

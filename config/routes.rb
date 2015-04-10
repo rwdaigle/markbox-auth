@@ -16,6 +16,14 @@ Rails.application.routes.draw do
   get "dropbox/webhook" => "dropbox#verify_webhook"
   post "dropbox/webhook" => "dropbox#webhook"
 
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: :none do
+        get "access_token", on: :member
+      end
+    end
+  end
+
   # Example resource route with options:
   #   resources :products do
   #     member do
