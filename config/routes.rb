@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   get "sessions/new" => "sessions#new", as: :login
   get "sessions/establish" => "sessions#establish", as: :db_callback
 
-  get "dropbox/webhook" => "dropbox#verify_webhook"
-  post "dropbox/webhook" => "dropbox#webhook"
+  # get "dropbox/webhook" => "dropbox#verify_webhook"
+  # post "dropbox/webhook" => "dropbox#webhook"
 
   namespace :api do
     namespace :v1 do
