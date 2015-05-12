@@ -18,4 +18,6 @@ end
 group :development, :test do
   gem 'foreman'
   gem 'spring'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'database_cleaner'
 end
