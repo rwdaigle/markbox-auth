@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :domains, only: :none do
-        get "access_token", on: :member
+        get "access_token", on: :member, :constraints => { :id => /[^\/]+/ } # Account for "." in domains
       end
       resources :users, only: :none do
         get "access_token", on: :member
